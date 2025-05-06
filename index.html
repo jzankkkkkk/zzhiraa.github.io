@@ -41,6 +41,11 @@
                 envelope.classList.toggle('flap');
             }
         });
+
+        // Ensure the button works on mobile devices
+        buttonLink.addEventListener('touchstart', (e) => {
+            e.stopPropagation(); // Prevent triggering the envelope click event
+        });
     </script>
 </body>
 </html>
